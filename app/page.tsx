@@ -1,5 +1,6 @@
 import { fetchAnime } from './action';
 import AnimeCard, { AnimeProp } from '@/components/AnimeCard';
+import LoadMore from '@/components/LoadMore';
 import Image from 'next/image';
 
 export default async function Home() {
@@ -14,6 +15,7 @@ export default async function Home() {
             <AnimeCard key={item.id} anime={item} index={index} />
           ))}
         </section>
+          <LoadMore />
       </main>
     </>
   );
